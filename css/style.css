@@ -137,6 +137,7 @@ body {
   margin-top: 2rem;
   margin-bottom: 0.5rem;
   color: #e54;
+  cursor: pointer;
 }
 
 .faq-lista dt::before {
@@ -225,5 +226,13 @@ body {
 }
 
 .js .js-tabcontent section.ativo {
+  display: block;
+}
+
+.js .js-faq dd {
+  display: none;
+}
+
+.js .js-faq dd.ativo {
   display: block;
 }
