@@ -221,6 +221,7 @@ body {
   }
 }
 
+// JS Animal images list
 .js .js-tabcontent section {
   display: none;
 }
@@ -230,6 +231,7 @@ body {
   animation: show 0.5s forwards;
 }
 
+//Animal description Animation
 @keyframes show {
   from {
     opacity: 0;
@@ -241,12 +243,14 @@ body {
   }
 }
 
+//JS Accordion list Class
 .js .js-faq dd {
   display: none;
 }
 
 .js .js-faq dd.ativo {
   display: block;
+  animation: faqShow 0.2s forwards;
 }
 
 .js .js-faq dt::after {
@@ -258,6 +262,19 @@ body {
   content: none;
 }
 
+//faq answers animation
+@keyframes faqShow {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -10px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+//JS sections scrolls animation
 .js .js-scroll {
   opacity: 0;
   transition: 0.3s;

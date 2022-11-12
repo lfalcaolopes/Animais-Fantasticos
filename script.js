@@ -1,26 +1,30 @@
+//Verification to only add js animations if browser supports it
 document.documentElement.className += " js"
 
+//Animal images list to show description
 function initTabNav(){
-  tabMenu = document.querySelectorAll(".js-tabmenu li")
-  tabcontent = document.querySelectorAll(".js-tabcontent section")
+  const tabMenu = document.querySelectorAll(".js-tabmenu li")
+  const tabcontent = document.querySelectorAll(".js-tabcontent section")
   
   tabcontent[0].classList.add("ativo")
   
+  //Only one element can have the active class
   tabMenu.forEach((element, index) => {
     element.addEventListener("click", function(){
       tabcontent.forEach((element) => {
         element.classList.remove("ativo")
       })
-  
       tabcontent[index].classList.add("ativo")
     })
   });
 }
 
+//Faq accordion list
 function initAccordionNav(){
-  faqMenu = document.querySelectorAll(".js-faq dt")
-  faqContent = document.querySelectorAll(".js-faq dd")
+  const faqMenu = document.querySelectorAll(".js-faq dt")
+  const faqContent = document.querySelectorAll(".js-faq dd")
   
+  //Every element can have the active class
   faqMenu.forEach((item, index)=>{
     item.addEventListener("click", function(){
       faqContent[index].classList.toggle("ativo")
@@ -29,16 +33,19 @@ function initAccordionNav(){
   })
 }
 
+//Changes tab navigation from fast to smooth
 function smoothTabScroll(){
-  menuItens = document.querySelectorAll(".js-menu [href^='#']")
+  const menuItens = document.querySelectorAll(".js-menu [href^='#']")
 
   menuItens.forEach((item)=>{
     item.addEventListener('click', function(event){
+      //Prevents normal behavior
       event.preventDefault()
-      id = this.getAttribute("href")
+      const id = this.getAttribute("href")
 
-      section = document.querySelector(id)
+      const section = document.querySelector(id)
 
+      //Change scroll behavior
       section.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
@@ -47,8 +54,9 @@ function smoothTabScroll(){
   })
 }
 
+//Sections fading in animation
 function scrollAnimation(){
-  sections = document.querySelectorAll(".js .js-scroll")
+  const sections = document.querySelectorAll(".js .js-scroll")
 
   sections[0].classList.add("ativo")
 
