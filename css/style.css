@@ -221,17 +221,17 @@ body {
   }
 }
 
-// JS Animal images list
-.js .js-tabcontent section {
+/* JS Animal images list */
+.js [data-tab='content'] section {
   display: none;
 }
 
-.js .js-tabcontent section.ativo {
+.js [data-tab='content'] section.ativo {
   display: block;
   animation: show 0.5s forwards;
 }
 
-//Animal description Animation
+/* Animal description Animation */
 @keyframes show {
   from {
     opacity: 0;
@@ -243,26 +243,26 @@ body {
   }
 }
 
-//JS Accordion list Class
-.js .js-faq dd {
+/* JS Accordion list Class */
+.js [data-animation='accordion'] dd {
   display: none;
 }
 
-.js .js-faq dd.ativo {
+.js [data-animation='accordion'] dd.ativo {
   display: block;
   animation: faqShow 0.2s forwards;
 }
 
-.js .js-faq dt::after {
+.js [data-animation='accordion'] dt::after {
   content: "⮯";
   margin-left: 10px;
 }
 
-.js .js-faq dt.ativo::after {
+.js [data-animation='accordion'] dt.ativo::after {
   content: none;
 }
 
-//faq answers animation
+/* faq answers animation */
 @keyframes faqShow {
   from {
     opacity: 0;
@@ -274,14 +274,14 @@ body {
   }
 }
 
-//JS sections scrolls animation
-.js .js-scroll {
+/* JS sections scrolls animation */
+.js [data-animation='fading scroll'] {
   opacity: 0;
   transition: 0.3s;
   transform: translate3d(-50px, 0, 0);
 }
 
-.js .js-scroll.ativo {
+.js [data-animation='fading scroll'].ativo {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }

@@ -10,7 +10,7 @@
 </head>
 <body>
   <nav class="menu">
-    <ul class="js-menu">
+    <ul data-animation="smooth scroll">
       <li><a href="#animais">Animais</a></li>
       <li><a href="#faq">Faq</a></li>
       <li><a href="#contato">Contato</a></li>
@@ -18,9 +18,9 @@
     </ul>
   </nav>
   
-  <section class="grid-section animais js-scroll" id="animais">
+  <section class="grid-section animais" data-animation="fading scroll" id="animais">
     <h1 class="titulo">Animais Fantásticos</h1>
-    <ul class="animais-lista js-tabmenu">
+    <ul class="animais-lista" data-tab="menu">
       <li>
         <img src="img/imagem1.jpg">
       </li>
@@ -40,7 +40,7 @@
         <img src="img/imagem6.jpg">
       </li>
     </ul>
-    <div class="animais-descricao js-tabcontent">
+    <div class="animais-descricao" data-tab="content">
       <section>
         <h2>Raposa</h2>
         <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados
@@ -91,9 +91,9 @@
     </div>
   </section>
 
-  <section class="grid-section faq js-scroll" id="faq">
+  <section class="grid-section faq" data-animation="fading scroll" id="faq">
     <h1 class="titulo">FAQ</h1>
-    <dl class="faq-lista js-faq">
+    <dl class="faq-lista" data-animation="accordion">
       <dt>Qual a idade dos animais?</dt>
       <dd>Animais normalmente possui expectativa de vida menor que a dos humanos, podendo variar dependendo as características do habitat do animal</dd>
       <dt>Eles são fantásticos?</dt>
@@ -105,7 +105,7 @@
     </dl>
   </section>
 
-  <section class="grid-section contato js-scroll" id="contato">
+  <section class="grid-section contato" data-animation="fading scroll" id="contato">
     <h1 class="titulo">Contato</h1>
     <div class="mapa">
       <img src="img/mapa.png">
@@ -121,6 +121,6 @@
     <p>Todos os direitos reservados.</p>
   </footer>
 
-  <script src="script.js"></script>  
+  <script type="module" src="js/script.js"></script>  
 </body>
 </html>
