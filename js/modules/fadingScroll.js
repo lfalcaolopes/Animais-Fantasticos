@@ -3,6 +3,7 @@ export default function scrollAnimation(){
   
     sections[0].classList.add("ativo")
   
+    //triggers fade in from the side animation once the section hits a certain height
     window.addEventListener('scroll', ()=>{
       sections.forEach((section)=>{
         const top = section.getBoundingClientRect().top - (window.innerHeight * 0.7)

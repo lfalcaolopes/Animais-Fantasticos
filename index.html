@@ -9,12 +9,21 @@
   <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
+  
   <div class="grid-container">
-
     <nav class="menu">
       <ul data-animation="smooth scroll">
         <li><a href="#animais">Animais</a></li>
         <li><a href="#faq">Faq</a></li>
+        <li data-dropdown>
+          <a href="sobre.html" id="dropdownButton">Sobre</a>
+          <ul class="dropdown-menu">
+            <li><a onclick="event.preventDefault()" href="">Empresa</a></li>
+            <li><a onclick="event.preventDefault()" href="equipe.html">Equipe</a></li>
+            <li><a onclick="event.preventDefault()" href="socios.html">Socios</a></li>
+            <li><a onclick="event.preventDefault()" href="investidores.html">Investidores</a></li>
+          </ul>
+        </li>
         <li><a href="#contato">Contato</a></li>
         <li><a data-modal="abrir" href="login.html">Login →</a></li>
       </ul>

@@ -3,6 +3,7 @@ import initAccordionNav from "./modules/accordionNav.js"
 import smoothTabScroll from "./modules/smoothScroll.js"
 import fadingScroll from "./modules/fadingScroll.js"
 import initModal from "./modules/modal.js"
+import initDropdownMenu from "./modules/dropdownMenu.js"
 
 //Verification to only add js animations if browser supports it
 document.documentElement.className += " js"
@@ -21,3 +22,6 @@ fadingScroll()
 
 //Login modal animations
 initModal()
+
+//Makes dropdown menu reactive
+initDropdownMenu()
