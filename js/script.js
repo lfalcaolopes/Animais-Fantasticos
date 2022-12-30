@@ -4,6 +4,7 @@ import smoothTabScroll from "./modules/smoothScroll.js"
 import fadingScroll from "./modules/fadingScroll.js"
 import initModal from "./modules/modal.js"
 import initDropdownMenu from "./modules/dropdownMenu.js"
+import initNumCounter from "./modules/numCounter.js"
 
 //Verification to only add js animations if browser supports it
 document.documentElement.className += " js"
@@ -25,3 +26,6 @@ initModal()
 
 //Makes dropdown menu reactive
 initDropdownMenu()
+
+//Number Counter animation
+initNumCounter()
