@@ -1,0 +1,17 @@
+[data-semana]::after {
+  height: 7px;
+  width: 7px;
+  content: '';
+  background-color: #E54;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 5px;
+  border: 2px solid black;
+
+}
+
+[data-semana].aberto::after {
+  background-color: #3F4;
+}
+
+
