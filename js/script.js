@@ -4,9 +4,9 @@ import smoothTabScroll from "./modules/smoothScroll.js";
 import fadingScroll from "./modules/fadingScroll.js";
 import initModal from "./modules/modal.js";
 import initDropdownMenu from "./modules/dropdownMenu.js";
-import initNumCounter from "./modules/numCounter.js";
 import initOperatingHours from "./modules/operatingHours.js";
 import initLocalStorage from "./modules/localStorage.js";
+import initAnimalsFetch from "./modules/animalsFetch.js";
 
 //Verification to only add js animations if browser supports it
 document.documentElement.className += " js";
@@ -29,11 +29,11 @@ initModal();
 //Makes dropdown menu reactive
 initDropdownMenu();
 
-//Number Counter animation
-initNumCounter();
-
 //Operating Hours visual confirmation
 initOperatingHours();
 
 //Store notes on local storage
 initLocalStorage();
+
+//Fetch animals numbers from api
+initAnimalsFetch();
