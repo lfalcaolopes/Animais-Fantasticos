@@ -9,7 +9,7 @@ export default function numCounter() {
       const incremento = Math.floor(numero / 80);
 
       const timer = setInterval(() => {
-        counter = counter + incremento;
+        counter += incremento;
 
         item.innerText = counter;
 
@@ -17,23 +17,25 @@ export default function numCounter() {
           clearInterval(timer);
           item.innerText = numero;
         }
-      }, 25 * Math.random()); //Animations ends at a similar time, but not the same
+      }, 25 * Math.random()); // Animations ends at a similar time, but not the same
     });
   }
 
+  let observer;
+
   function mutationHandler(mutation) {
-    //Verification if class ativo exists
+    // Verification if class ativo exists
     if (mutation[0].target.classList.contains("ativo")) {
-      //Removes observer after it triggers
+      // Removes observer after it triggers
       observer.disconnect();
       counterUpAnimation();
     }
   }
 
+  observer = new MutationObserver(mutationHandler);
+
   const observerTarget = document.querySelector("#numeros");
 
-  const observer = new MutationObserver(mutationHandler);
-
-  //SetUp of the element that gets observed and what changes are being watched
+  // SetUp of the element that gets observed and what changes are being watched
   observer.observe(observerTarget, { attributes: true });
 }

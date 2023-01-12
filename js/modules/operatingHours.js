@@ -9,7 +9,10 @@ export default function operatingHours() {
   const diaHoje = date.getUTCDay() - 3;
   const horaAgora = date.getUTCHours() - 3;
 
-  if (semanaFuncionamento.indexOf(diaHoje) !== -1 && horaFuncionamento[0] < horaAgora < horaFuncionamento[1]) {
+  if (
+    semanaFuncionamento.indexOf(diaHoje) !== -1 &&
+    horaFuncionamento[0] < horaAgora < horaFuncionamento[1]
+  ) {
     funcionamento.classList.add("aberto");
   }
 }
