@@ -6,7 +6,7 @@ export default function operatingHours() {
 
   const date = new Date();
 
-  const diaHoje = date.getUTCDay() - 3;
+  const diaHoje = date.getUTCDay();
   const horaAgora = date.getUTCHours() - 3;
 
   if (semanaFuncionamento.indexOf(diaHoje) !== -1 && horaFuncionamento[0] < horaAgora < horaFuncionamento[1]) {
