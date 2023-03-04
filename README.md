@@ -11,7 +11,7 @@
 <p align="center">
  <a href="#-sobre">Sobre</a> •
  <a href="#-demonstração">Demonstração</a> •
- <a href="#-tecnologias">Tecnologias</a> • 
+ <a href="#-tecnologias-utilizadas">Tecnologias</a> • 
  <a href="#-autor">Autor</a>
 </p>
 
