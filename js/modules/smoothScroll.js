@@ -5,7 +5,9 @@ export default function smoothTabScroll() {
     item.addEventListener("click", (event) => {
       // Prevents normal behavior
       event.preventDefault();
-      const id = this.getAttribute("href");
+      const id = event.currentTarget.getAttribute("href");
+
+      console.log(id);
 
       const section = document.querySelector(id);
 
